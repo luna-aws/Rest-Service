@@ -11,7 +11,7 @@ final class ViewModel: ObservableObject {
     
     let didChange = PassthroughSubject<ViewModel, Never>()
     
-    @Published var postModel = [PostModel]() {
+    var issues: Issues? {
         didSet {
             didChange.send(self)
         }
@@ -23,7 +23,7 @@ final class ViewModel: ObservableObject {
     
     private func getModel() {
         NetworkManager().getData {
-            self.postModel = $0
+            self.issues = $0
         }
     }
 }

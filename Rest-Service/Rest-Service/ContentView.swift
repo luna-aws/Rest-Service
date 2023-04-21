@@ -12,9 +12,19 @@ struct ContentView: View {
     @ObservedObject var viewModel = ViewModel()
     
     var body: some View {
-        List(viewModel.postModel) { model in
-            Text(model.title)
-                .foregroundColor(.blue)
+        if let items = viewModel.issues?.issues {
+            List {
+                ForEach(items.indices, id: \.self) { index in
+                    Text("""
+                            Issue Number: \(index)
+                            Title: \(items[index].title ?? "NULL")
+                            Desc: \(items[index].desc ?? "NULL")
+                            Issue ID: \(items[index].issueId ?? "NULL")
+                            Issue category: \(items[index].issueCategories?[0].desc ?? "NULL")
+                        """)
+                        .foregroundColor(.blue)
+                }
+            }
         }
     }
 }

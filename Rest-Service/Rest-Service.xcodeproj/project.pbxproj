@@ -7,23 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26814BB929F2F76B000EA8B5 /* Mock.json in Resources */ = {isa = PBXBuildFile; fileRef = 26814BB829F2F76B000EA8B5 /* Mock.json */; };
 		2694299129EFBE8A00A4E647 /* Rest_ServiceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2694299029EFBE8A00A4E647 /* Rest_ServiceApp.swift */; };
 		2694299329EFBE8A00A4E647 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2694299229EFBE8A00A4E647 /* ContentView.swift */; };
 		2694299529EFBE8B00A4E647 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2694299429EFBE8B00A4E647 /* Assets.xcassets */; };
 		2694299829EFBE8B00A4E647 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2694299729EFBE8B00A4E647 /* Preview Assets.xcassets */; };
 		2694299F29EFBEF400A4E647 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2694299E29EFBEF400A4E647 /* NetworkManager.swift */; };
-		269429A129EFC03100A4E647 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269429A029EFC03000A4E647 /* PostModel.swift */; };
+		269429A129EFC03100A4E647 /* IssueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269429A029EFC03000A4E647 /* IssueModel.swift */; };
 		269429A329EFC50D00A4E647 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269429A229EFC50D00A4E647 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		26814BB829F2F76B000EA8B5 /* Mock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Mock.json; sourceTree = "<group>"; };
 		2694298D29EFBE8A00A4E647 /* Rest-Service.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rest-Service.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2694299029EFBE8A00A4E647 /* Rest_ServiceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rest_ServiceApp.swift; sourceTree = "<group>"; };
 		2694299229EFBE8A00A4E647 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2694299429EFBE8B00A4E647 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2694299729EFBE8B00A4E647 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2694299E29EFBEF400A4E647 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		269429A029EFC03000A4E647 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		269429A029EFC03000A4E647 /* IssueModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueModel.swift; sourceTree = "<group>"; };
 		269429A229EFC50D00A4E647 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -57,8 +59,9 @@
 		2694298F29EFBE8A00A4E647 /* Rest-Service */ = {
 			isa = PBXGroup;
 			children = (
+				26814BB829F2F76B000EA8B5 /* Mock.json */,
 				2694299E29EFBEF400A4E647 /* NetworkManager.swift */,
-				269429A029EFC03000A4E647 /* PostModel.swift */,
+				269429A029EFC03000A4E647 /* IssueModel.swift */,
 				2694299229EFBE8A00A4E647 /* ContentView.swift */,
 				269429A229EFC50D00A4E647 /* ViewModel.swift */,
 				2694299029EFBE8A00A4E647 /* Rest_ServiceApp.swift */,
@@ -134,6 +137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26814BB929F2F76B000EA8B5 /* Mock.json in Resources */,
 				2694299829EFBE8B00A4E647 /* Preview Assets.xcassets in Resources */,
 				2694299529EFBE8B00A4E647 /* Assets.xcassets in Resources */,
 			);
@@ -150,7 +154,7 @@
 				2694299F29EFBEF400A4E647 /* NetworkManager.swift in Sources */,
 				2694299329EFBE8A00A4E647 /* ContentView.swift in Sources */,
 				2694299129EFBE8A00A4E647 /* Rest_ServiceApp.swift in Sources */,
-				269429A129EFC03100A4E647 /* PostModel.swift in Sources */,
+				269429A129EFC03100A4E647 /* IssueModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

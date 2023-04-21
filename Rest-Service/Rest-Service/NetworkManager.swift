@@ -8,20 +8,15 @@
 import Foundation
 
 final class NetworkManager {
-    func getData(model: @escaping([PostModel]) -> ()) {
-        guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts") else { fatalError("URL Error") }
-        
-        URLSession.shared.dataTask(with: url) { data, _, _ in
-            guard let data = data else { fatalError("data Task Error") }
-            
-            do {
-                let decodedData = try JSONDecoder().decode([PostModel].self, from: data)
-                DispatchQueue.main.async {
-                    model(decodedData)
-                }
-            } catch let error {
-                fatalError("Decode error: \(error.localizedDescription)")
-            }
-        }.resume()
+    func getData(model: @escaping(Issues) -> ()) {
+        guard let url = Bundle.main.url(forResource: "Mock", withExtension: "json") else { return }
+        do {
+            let jsonDecoder = JSONDecoder()
+            let data = try Data(contentsOf: url, options: .mappedIfSafe)
+            let decodedData = try jsonDecoder.decode(Issues.self, from: data)
+            model(decodedData)
+        } catch let error {
+            print("Error: \(error)")
+        }
     }
 }
