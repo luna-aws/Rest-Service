@@ -22,30 +22,32 @@ final class ViewModel: ObservableObject {
     }
     
     init() {
-        getModelFromFuture()
+        getModelWithFuture()
     }
     
-    private func getModel() {
-        NetworkManager().getDataWithScapingClosure {
-            self.postModel = $0
-        }
-    }
-    
-    private func getModelFromPromise() {
-        NetworkManager().getDataWithPromise().done { postModel in
+    private func getModelWithScapingClosure() {
+        NetworkManager().gettingDataWithScapingClosure { postModel in
             self.postModel = postModel
-        }.catch { error in
-            print(error.localizedDescription)
         }
     }
     
-    private func getModelFromFuture() {
-        networkManager.getdataWithFuture()
+    private func getModelWithPromise() {
+        NetworkManager().gettingDataWithPromise()
+            .done { postModel in
+                self.postModel = postModel
+            }.catch { error in
+                print(error.localizedDescription)
+            }
+    }
+    
+    private func getModelWithFuture() {
+        /// To get data from publishers
+        networkManager.gettingDataWithFutureDataTask()
             .receive(on: DispatchQueue.main)
             .sink { completion in
                 switch completion {
-                case .failure(let error): print(ErrorHelper.serverError(error))
-                case .finished: break
+                    case .failure(let error): print(ErrorHelper.serverError(error))
+                    case .finished: break
                 }
             } receiveValue: { postModel in
                 self.postModel = postModel
