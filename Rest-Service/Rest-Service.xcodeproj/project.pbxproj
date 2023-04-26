@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		260AFCDF29F8952600230193 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260AFCDE29F8952600230193 /* AppConstants.swift */; };
+		260AFCE229F897BF00230193 /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 260AFCE129F897BF00230193 /* PromiseKit */; };
+		260AFCE429F8D16800230193 /* Error+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260AFCE329F8D16800230193 /* Error+Helper.swift */; };
 		2694299129EFBE8A00A4E647 /* Rest_ServiceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2694299029EFBE8A00A4E647 /* Rest_ServiceApp.swift */; };
 		2694299329EFBE8A00A4E647 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2694299229EFBE8A00A4E647 /* ContentView.swift */; };
 		2694299529EFBE8B00A4E647 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2694299429EFBE8B00A4E647 /* Assets.xcassets */; };
@@ -17,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		260AFCDE29F8952600230193 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		260AFCE329F8D16800230193 /* Error+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Helper.swift"; sourceTree = "<group>"; };
 		2694298D29EFBE8A00A4E647 /* Rest-Service.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rest-Service.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2694299029EFBE8A00A4E647 /* Rest_ServiceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rest_ServiceApp.swift; sourceTree = "<group>"; };
 		2694299229EFBE8A00A4E647 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				260AFCE229F897BF00230193 /* PromiseKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +63,8 @@
 		2694298F29EFBE8A00A4E647 /* Rest-Service */ = {
 			isa = PBXGroup;
 			children = (
+				260AFCE329F8D16800230193 /* Error+Helper.swift */,
+				260AFCDE29F8952600230193 /* AppConstants.swift */,
 				2694299E29EFBEF400A4E647 /* NetworkManager.swift */,
 				269429A029EFC03000A4E647 /* PostModel.swift */,
 				2694299229EFBE8A00A4E647 /* ContentView.swift */,
@@ -92,6 +100,9 @@
 			dependencies = (
 			);
 			name = "Rest-Service";
+			packageProductDependencies = (
+				260AFCE129F897BF00230193 /* PromiseKit */,
+			);
 			productName = "Rest-Service";
 			productReference = 2694298D29EFBE8A00A4E647 /* Rest-Service.app */;
 			productType = "com.apple.product-type.application";
@@ -120,6 +131,9 @@
 				Base,
 			);
 			mainGroup = 2694298429EFBE8A00A4E647;
+			packageReferences = (
+				260AFCE029F897BF00230193 /* XCRemoteSwiftPackageReference "PromiseKit" */,
+			);
 			productRefGroup = 2694298E29EFBE8A00A4E647 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -147,7 +161,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				269429A329EFC50D00A4E647 /* ViewModel.swift in Sources */,
+				260AFCDF29F8952600230193 /* AppConstants.swift in Sources */,
 				2694299F29EFBEF400A4E647 /* NetworkManager.swift in Sources */,
+				260AFCE429F8D16800230193 /* Error+Helper.swift in Sources */,
 				2694299329EFBE8A00A4E647 /* ContentView.swift in Sources */,
 				2694299129EFBE8A00A4E647 /* Rest_ServiceApp.swift in Sources */,
 				269429A129EFC03100A4E647 /* PostModel.swift in Sources */,
@@ -349,6 +365,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		260AFCE029F897BF00230193 /* XCRemoteSwiftPackageReference "PromiseKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mxcl/PromiseKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		260AFCE129F897BF00230193 /* PromiseKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 260AFCE029F897BF00230193 /* XCRemoteSwiftPackageReference "PromiseKit" */;
+			productName = PromiseKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2694298529EFBE8A00A4E647 /* Project object */;
 }
