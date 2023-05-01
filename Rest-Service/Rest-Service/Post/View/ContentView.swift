@@ -12,9 +12,11 @@ struct ContentView: View {
     @ObservedObject var viewModel = ViewModel()
     
     var body: some View {
-        List(viewModel.postModel) { model in
-            Text(model.title)
-                .foregroundColor(.blue)
+        if let posts = viewModel.model {
+            List(posts) { post in
+                Text(post.title)
+                    .foregroundColor(.gray)
+            }
         }
     }
 }

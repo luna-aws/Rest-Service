@@ -8,6 +8,15 @@
         "revision" : "8a98e31a47854d3180882c8068cc4d9381bf382d",
         "version" : "6.22.1"
       }
+    },
+    {
+      "identity" : "swiftvcr",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/aarons22/SwiftVCR",
+      "state" : {
+        "revision" : "326c3baf9d02490af08daf986d639e29727b385d",
+        "version" : "0.3.0"
+      }
     }
   ],
   "version" : 2

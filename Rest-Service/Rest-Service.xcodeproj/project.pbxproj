@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2609F25F29FCE34400318026 /* Resource in Resources */ = {isa = PBXBuildFile; fileRef = 2609F25E29FCE34400318026 /* Resource */; };
+		2609F26229FCE36300318026 /* SwiftVCR in Frameworks */ = {isa = PBXBuildFile; productRef = 2609F26129FCE36300318026 /* SwiftVCR */; };
 		260AFCDF29F8952600230193 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260AFCDE29F8952600230193 /* AppConstants.swift */; };
 		260AFCE229F897BF00230193 /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 260AFCE129F897BF00230193 /* PromiseKit */; };
 		260AFCE429F8D16800230193 /* Error+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260AFCE329F8D16800230193 /* Error+Helper.swift */; };
@@ -15,11 +17,12 @@
 		2694299529EFBE8B00A4E647 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2694299429EFBE8B00A4E647 /* Assets.xcassets */; };
 		2694299829EFBE8B00A4E647 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2694299729EFBE8B00A4E647 /* Preview Assets.xcassets */; };
 		2694299F29EFBEF400A4E647 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2694299E29EFBEF400A4E647 /* NetworkManager.swift */; };
-		269429A129EFC03100A4E647 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269429A029EFC03000A4E647 /* PostModel.swift */; };
+		269429A129EFC03100A4E647 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269429A029EFC03000A4E647 /* Post.swift */; };
 		269429A329EFC50D00A4E647 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269429A229EFC50D00A4E647 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2609F25E29FCE34400318026 /* Resource */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Resource; sourceTree = "<group>"; };
 		260AFCDE29F8952600230193 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		260AFCE329F8D16800230193 /* Error+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Helper.swift"; sourceTree = "<group>"; };
 		2694298D29EFBE8A00A4E647 /* Rest-Service.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rest-Service.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -28,7 +31,7 @@
 		2694299429EFBE8B00A4E647 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2694299729EFBE8B00A4E647 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2694299E29EFBEF400A4E647 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		269429A029EFC03000A4E647 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		269429A029EFC03000A4E647 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		269429A229EFC50D00A4E647 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -37,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2609F26229FCE36300318026 /* SwiftVCR in Frameworks */,
 				260AFCE229F897BF00230193 /* PromiseKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -44,6 +48,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2609F25529FCE25700318026 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				2609F25629FCE25E00318026 /* Model */,
+				2609F25829FCE27400318026 /* View */,
+				2609F25929FCE27E00318026 /* ViewModel */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		2609F25629FCE25E00318026 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				269429A029EFC03000A4E647 /* Post.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2609F25829FCE27400318026 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2694299229EFBE8A00A4E647 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2609F25929FCE27E00318026 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				269429A229EFC50D00A4E647 /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2609F25A29FCE2C200318026 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				2694299E29EFBEF400A4E647 /* NetworkManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		2609F25B29FCE2CA00318026 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				260AFCE329F8D16800230193 /* Error+Helper.swift */,
+				2609F25C29FCE2D400318026 /* Utilities */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		2609F25C29FCE2D400318026 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				260AFCDE29F8952600230193 /* AppConstants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		2609F25D29FCE32B00318026 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				2609F25E29FCE34400318026 /* Resource */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		2694298429EFBE8A00A4E647 = {
 			isa = PBXGroup;
 			children = (
@@ -63,12 +134,10 @@
 		2694298F29EFBE8A00A4E647 /* Rest-Service */ = {
 			isa = PBXGroup;
 			children = (
-				260AFCE329F8D16800230193 /* Error+Helper.swift */,
-				260AFCDE29F8952600230193 /* AppConstants.swift */,
-				2694299E29EFBEF400A4E647 /* NetworkManager.swift */,
-				269429A029EFC03000A4E647 /* PostModel.swift */,
-				2694299229EFBE8A00A4E647 /* ContentView.swift */,
-				269429A229EFC50D00A4E647 /* ViewModel.swift */,
+				2609F25D29FCE32B00318026 /* Resource */,
+				2609F25B29FCE2CA00318026 /* Helpers */,
+				2609F25A29FCE2C200318026 /* Networking */,
+				2609F25529FCE25700318026 /* Post */,
 				2694299029EFBE8A00A4E647 /* Rest_ServiceApp.swift */,
 				2694299429EFBE8B00A4E647 /* Assets.xcassets */,
 				2694299629EFBE8B00A4E647 /* Preview Content */,
@@ -102,6 +171,7 @@
 			name = "Rest-Service";
 			packageProductDependencies = (
 				260AFCE129F897BF00230193 /* PromiseKit */,
+				2609F26129FCE36300318026 /* SwiftVCR */,
 			);
 			productName = "Rest-Service";
 			productReference = 2694298D29EFBE8A00A4E647 /* Rest-Service.app */;
@@ -133,6 +203,7 @@
 			mainGroup = 2694298429EFBE8A00A4E647;
 			packageReferences = (
 				260AFCE029F897BF00230193 /* XCRemoteSwiftPackageReference "PromiseKit" */,
+				2609F26029FCE36300318026 /* XCRemoteSwiftPackageReference "SwiftVCR" */,
 			);
 			productRefGroup = 2694298E29EFBE8A00A4E647 /* Products */;
 			projectDirPath = "";
@@ -148,6 +219,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2609F25F29FCE34400318026 /* Resource in Resources */,
 				2694299829EFBE8B00A4E647 /* Preview Assets.xcassets in Resources */,
 				2694299529EFBE8B00A4E647 /* Assets.xcassets in Resources */,
 			);
@@ -166,7 +238,7 @@
 				260AFCE429F8D16800230193 /* Error+Helper.swift in Sources */,
 				2694299329EFBE8A00A4E647 /* ContentView.swift in Sources */,
 				2694299129EFBE8A00A4E647 /* Rest_ServiceApp.swift in Sources */,
-				269429A129EFC03100A4E647 /* PostModel.swift in Sources */,
+				269429A129EFC03100A4E647 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +439,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		2609F26029FCE36300318026 /* XCRemoteSwiftPackageReference "SwiftVCR" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/aarons22/SwiftVCR";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.0;
+			};
+		};
 		260AFCE029F897BF00230193 /* XCRemoteSwiftPackageReference "PromiseKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mxcl/PromiseKit.git";
@@ -378,6 +458,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		2609F26129FCE36300318026 /* SwiftVCR */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2609F26029FCE36300318026 /* XCRemoteSwiftPackageReference "SwiftVCR" */;
+			productName = SwiftVCR;
+		};
 		260AFCE129F897BF00230193 /* PromiseKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 260AFCE029F897BF00230193 /* XCRemoteSwiftPackageReference "PromiseKit" */;
